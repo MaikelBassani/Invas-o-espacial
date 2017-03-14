@@ -1,5 +1,5 @@
 var imgjogo = new Image;
-var imgPersonagem = new Image;
+var imgJogador = new Image;
 var imgTiro = new Image;
 
 var cont = 1;
@@ -33,7 +33,7 @@ var tiro = {
 	}
 }
 
-imgPersonagem.src = 'img/nave.png';
+imgJogador.src = 'img/nave.png';
 imgTiro.src = 'img/tiro.png';
 
 //window.onload = function() {
@@ -43,13 +43,13 @@ imgTiro.src = 'img/tiro.png';
 	canvas.height= 700;
 	canvas.width= 600;
 
-	ctx.drawImage( imgPersonagem, 0,jogador.direcao.esquerda,jogador.largura,jogador.altura,jogador.x,jogador.y,jogador.largura,jogador.altura);
-	ctx.drawImage( imgTiro, 0,tiro.fase.fase0,tiro.largura,tiro.altura,tiro.x,tiro.y,tiro.largura,tiro.altura);
+	ctx.drawImage( imgTiro, 0,tiro.faseAtual,tiro.largura,tiro.altura,tiro.x,tiro.y,tiro.largura,tiro.altura);
+	ctx.drawImage( imgJogador, 0,jogador.direcao.esquerda,jogador.largura,jogador.altura,jogador.x,jogador.y,jogador.largura,jogador.altura);
 	
 	setInterval(function(){
 		ctx.clearRect(0,0,canvas.width,canvas.height);
-		ctx.drawImage( imgPersonagem, 0,jogador.direcaoAtual,jogador.largura,jogador.altura,jogador.x,jogador.y,jogador.largura,jogador.altura);
-		ctx.drawImage( imgTiro, 0,tiro.fase.fase0,tiro.largura,tiro.altura,tiro.x,tiro.y,tiro.largura,tiro.altura);
+		ctx.drawImage( imgTiro, 0,tiro.faseAtual,tiro.largura,tiro.altura,tiro.x,tiro.y,tiro.largura,tiro.altura);
+		ctx.drawImage( imgJogador, 0,jogador.direcaoAtual,jogador.largura,jogador.altura,jogador.x,jogador.y,jogador.largura,jogador.altura);
 	});
 
 	window.addEventListener("keydown", function keydown(e) {
