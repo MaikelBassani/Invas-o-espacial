@@ -77,7 +77,7 @@ window.addEventListener("keyup", function keydown(e) {
 	jogador.direcaoAtual=jogador.direcao.frente;
 });	
 function atirar(){
-	if (ultimoTiro == null || ((new Date()).valueOf() - ultimoTiro) > (1000 / 3)){
+	if (ultimoTiro == null || ((new Date()).valueOf() - ultimoTiro) > (1000 / 30000000000)){
 		tiros.push(new Tiro(jogador.x, jogador.y - 12, 10));
 		ultimoTiro = (new Date()).valueOf();
 	}
