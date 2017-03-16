@@ -58,13 +58,13 @@ window.addEventListener("keydown", function keydown(e) {
 		case 37:
 			if (jogador.x > 20){
 				jogador.direcaoAtual=jogador.direcao.esquerda;
-				jogador.x-=30;
+				jogador.x-=15;
 			}
 			break;
 		case 39:
 			if (jogador.x < 520){
 				jogador.direcaoAtual=jogador.direcao.direita;
-				jogador.x+=30;
+				jogador.x+=15;
 			}
 			break;
 			
@@ -77,7 +77,7 @@ window.addEventListener("keyup", function keydown(e) {
 	jogador.direcaoAtual=jogador.direcao.frente;
 });	
 function atirar(){
-	if (ultimoTiro == null || ((new Date()).valueOf() - ultimoTiro) > (1000 / 12200)){
+	if (ultimoTiro == null || ((new Date()).valueOf() - ultimoTiro) > (1000 / 3)){
 		tiros.push(new Tiro(jogador.x, jogador.y - 12, 10));
 		ultimoTiro = (new Date()).valueOf();
 	}
