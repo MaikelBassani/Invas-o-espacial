@@ -17,7 +17,7 @@
 		p.header, p.footer { display: none; }
 		div.logo { width: 204px; height: 38px; float: left; background: url(logo.png) 0 0 no-repeat; position: relative; z-index: 10; }
 		div.title { height: 38px; line-height: 38px; padding: 0 10px; margin: 0 1px 0 0; float: right; color: #333; text-align: right; font-size: 18px; position: relative; z-index: 10; }
-		#canvas { margin: 0 0 10px 0; position: relative; z-index: 9; box-shadow: 0 10px 30px rgba(0,0,0,0.2); -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+		#canvas {position: relative; z-index: 9; box-shadow: 0 10px 30px rgba(0,0,0,0.2); -moz-box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
 		body.template { }
 		.template .template-wrap { }
@@ -26,7 +26,9 @@
 <body class="template">
 	<p class="header"><span>ISPEICI INVEIDÊRS | </span>Protótipo Jogo</p>
 	<div class="template-wrap clear">
-		<iframe class="emscripten" id="canvas" src="invas-o-espacial/index.html" width="90%" height="600px"></iframe>
+		<center>
+			<iframe class="emscripten" id="canvas" src="invas-o-espacial/index.html" width="90%" height="600px"></iframe>
+		</center>
 		<br>
 		<div class="logo"></div>
 		<div class="title">Protótipo Jogo</div>
