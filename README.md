@@ -9,4 +9,6 @@ Funcionalidades: O jogo tera uma pagina inicial onde contera as opçoes de jogar
         
 Jogo até dia 17/05 - Nossa equipe tentara entregar até o dia 17/05, as seguintes especificações: a nave principal conseguira mover-se para direita e esquerda, e atirar nas naves inimigas.Colocaremos as naves inimigas se movendo, e quando um tiro acertar as naves inimigas, ocorerra uma explosão.
 
-REPOSITÓRIO AUXILIAR CONTENDO O GAME COM PHASERJS: https://rriese.github.io/phaser-invader/JOGO%20COM%20PHASER/
+REPOSITÓRIO AUXILIAR CONTENDO O GAME COM PHASERJS: https://github.com/rriese/phaser-invader
+
+LINK COM O GAME FUNCIONANDO: https://rriese.github.io/phaser-invader/JOGO%20COM%20PHASER/
