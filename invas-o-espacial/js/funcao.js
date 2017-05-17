@@ -82,7 +82,6 @@ var atualizaCanvas = setInterval(function(){
 	}
 	
 	if (itsRainingMan == true){
-		console.log("caiu")
 		manRaining();
 	}
 	
@@ -163,6 +162,7 @@ function whatKey(evt){
 }
 
 function manRaining(){
+	console.log("funcao");
 	for (var i = 0; i < inveiders.length; i++){		
 		inveiders[i].y -= 0.7;
 	}
