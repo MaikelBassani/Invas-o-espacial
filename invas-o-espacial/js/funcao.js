@@ -164,7 +164,7 @@ function whatKey(evt){
 function manRaining(){
 	console.log("teste");
 	for (var i = 0; i < inveiders.length; i++){		
-		inveiders[i].y += 1000;
+		inveiders[i].y += 10;
 	}
 	itsRainingMan = false;
 }
