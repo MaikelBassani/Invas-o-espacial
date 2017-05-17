@@ -90,7 +90,7 @@ var atualizaCanvas = setInterval(function(){
 		}
 		
 	}
-	
+	console.log("itsRainingMan: "+ itsRainingMan)
 	if (itsRainingMan == true){
 		console.log("itsRainingMan: "+ itsRainingMan)
 		for (var i = 0; i < inveiders.length; i++){		
