@@ -91,8 +91,8 @@ var atualizaCanvas = setInterval(function(){
 	}
 
 	if (itsRainingMan == true){
-		for (var i = 0; i < inveiders.length; i++){		
-			inveiders[i].y += 0.7;
+		for (var x = 0; x < inveiders.length; x++){		
+			inveiders[x].y += 0.7;
 		}
 		itsRainingMan = false;
 	}
