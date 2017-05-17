@@ -74,6 +74,7 @@ var atualizaCanvas = setInterval(function(){
 		hitRight = true;
 		hitLeft = false;
 		itsRainingMan = true;
+		console.log("itsRainingMan: "+ itsRainingMan)
 	}
 	
 	if (invasorEsquerda.x <= 0 && hitLeft == false){
