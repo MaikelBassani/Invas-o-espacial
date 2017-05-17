@@ -7,6 +7,8 @@ var cont = 1;
 var fogo;
 var inveiders = [];
 
+var hitLeft = true, hitRight = false, hitBottom = false, itsRainingMan = false;
+
 var xInimigo = 0;
 var yInimigo = 0;
 
@@ -60,14 +62,58 @@ for (var i = 0; i < 6; i++){
 	ctx.drawImage( imgInveiders, 0,inveiders[i].direcao.frente,inveiders[i].largura,inveiders[i].altura,inveiders[i].x,inveiders[i].y,inveiders[i].largura,inveiders[i].altura);
 }
 
-setInterval(function(){
+var atualizaCanvas = setInterval(function(){
 	ctx.clearRect(0,0,canvas.width,canvas.height);
 	ctx.drawImage( imgJogador, 0,jogador.direcaoAtual,jogador.largura,jogador.altura,jogador.x,jogador.y,jogador.largura,jogador.altura);
+	ctx.drawImage( imgJogador, 0,jogador.direcaoAtual,jogador.largura,jogador.altura,jogador.x,jogador.y,jogador.largura,jogador.altura);
+		
+	var invasorEsquerda = inveiders[0];
+	var invasorDireita = inveiders[5];
+	
+	if (invasorDireita.x >= 600 && hitRight == false){
+		hitRight = true;
+		hitLeft = false;
+		itsRainingMan = true;
+	}
+	
+	if (invasorEsquerda.x <= 0 && hitLeft == false){
+		hitLeft = true;
+		hitRight = false;
+	}
+	
+	if (hitRight == false){
+		for (var i = 0; i < inveiders.length; i++){		
+		
+			inveiders[i].x += 0.7;
+		
+		}
+		
+	}
+	
+	if (itsRainingMan == true){
+		for (var i = 0; i < inveiders.length; i++){		
+			inveiders[i].y += 0.7;
+		}
+		itsRainingMan = false;
+	}
+	
+	if (hitLeft == false){
+		for (var i = 0; i < inveiders.length; i++){		
+	     	inveiders[i].x -= 0.7;
+		}
+	}
+	
+	if (inveiders[0].y > 700){
+		console.log("aki");
+		clearInterval(atualizaCanvas);
+	}
+	
+	
 	
 	for (var i = 0; i < inveiders.length; i++){
 		ctx.drawImage( imgInveiders, 0,inveiders[i].direcao.frente,inveiders[i].largura,inveiders[i].altura,inveiders[i].x,inveiders[i].y,inveiders[i].largura,inveiders[i].altura);
 	}
-	
+
 	for (i = 0; i < tiros.length; i++) {
 		var tiro = this.tiros[i];
 		for (var k = 0; k < inveiders.length; k++){
