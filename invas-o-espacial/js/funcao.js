@@ -83,10 +83,7 @@ var atualizaCanvas = setInterval(function(){
 	
 	if (itsRainingMan == true){
 		console.log("caiu")
-		for (var x = 0; x < inveiders.length; x++){		
-			inveiders[x].y += 0.7;
-		}
-		itsRainingMan = false;
+		manRaining();
 	}
 	
 	if (hitRight == false){
@@ -163,6 +160,13 @@ function whatKey(evt){
 			atirar();
 			break;
 	}
+}
+
+function manRaining(){
+	for (var i = 0; i < inveiders.length; i++){		
+		inveiders[i].y -= 0.7;
+	}
+	itsRainingMan = false;
 }
 
 window.addEventListener("keyup", function keydown(e) {
