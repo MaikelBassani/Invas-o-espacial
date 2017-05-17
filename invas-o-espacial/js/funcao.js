@@ -91,6 +91,7 @@ var atualizaCanvas = setInterval(function(){
 	}
 
 	if (itsRainingMan == true){
+		console.log("aki")
 		for (var x = 0; x < inveiders.length; x++){		
 			inveiders[x].y += 0.7;
 		}
