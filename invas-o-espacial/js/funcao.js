@@ -68,7 +68,7 @@ var atualizaCanvas = setInterval(function(){
 	ctx.drawImage( imgJogador, 0,jogador.direcaoAtual,jogador.largura,jogador.altura,jogador.x,jogador.y,jogador.largura,jogador.altura);
 		
 	var invasorEsquerda = inveiders[0];
-	var invasorDireita = inveiders[5];
+	var invasorDireita = inveiders[inveiders.length];
 	
 	if (invasorDireita.x + invasorDireita.largura/2 >= 600 && hitRight == false){
 		hitRight = true;
