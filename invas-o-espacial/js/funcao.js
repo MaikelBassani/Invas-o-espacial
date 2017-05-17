@@ -74,7 +74,6 @@ var atualizaCanvas = setInterval(function(){
 		hitRight = true;
 		hitLeft = false;
 		itsRainingMan = true;
-		console.log("itsRainingMan: "+ itsRainingMan)
 	}
 	
 	if (invasorEsquerda.x <= 0 && hitLeft == false){
@@ -90,9 +89,8 @@ var atualizaCanvas = setInterval(function(){
 		}
 		
 	}
-	console.log("itsRainingMan: "+ itsRainingMan)
+
 	if (itsRainingMan == true){
-		console.log("ta chuvendo homens")
 		for (var i = 0; i < inveiders.length; i++){		
 			inveiders[i].y += 0.7;
 		}
