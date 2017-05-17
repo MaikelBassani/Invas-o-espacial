@@ -70,7 +70,7 @@ var atualizaCanvas = setInterval(function(){
 	var invasorEsquerda = inveiders[0];
 	var invasorDireita = inveiders[inveiders.length];
 	
-	if (invasorDireita.x + invasorDireita.largura/2 >= 600 && hitRight == false){
+	if (invasorDireita.x + invasorDireita.largura >= 600 && hitRight == false){
 		hitRight = true;
 		hitLeft = false;
 		itsRainingMan = true;
