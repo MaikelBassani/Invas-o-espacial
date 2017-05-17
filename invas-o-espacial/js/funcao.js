@@ -91,6 +91,7 @@ var atualizaCanvas = setInterval(function(){
 	}
 	
 	if (itsRainingMan == true){
+		console.log("itsRainingMan: "+ itsRainingMan)
 		for (var i = 0; i < inveiders.length; i++){		
 			inveiders[i].y += 0.7;
 		}
